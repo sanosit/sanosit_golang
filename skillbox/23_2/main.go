@@ -8,7 +8,7 @@ import (
 func main() {
 	sentences := [2]string{"hello", "world"}
 	chars := [3]rune{'h', 'e', 'l'}
-	fmt.Printf("%v\n", sentences)
+	fmt.Printf("%q\n", sentences)
 	fmt.Printf("%q\n", chars)
 	fmt.Println()
 	for i := 0; i < len(sentences); i++ {
