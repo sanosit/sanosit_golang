@@ -13,21 +13,34 @@ func main() {
 	fmt.Fscan(os.Stdin, &size)
 	fmt.Println("Введите строку: ")
 	fmt.Fscan(os.Stdin, &s)
-	ss := strings.Split(s, "")
+	ss := strings.Split(s, "") //строку на массив
 	fmt.Println(ss)
 	for i := 0; i < size; i++ {
 		if ss[i] == "a" {
 			countA = i + 1
+			if countB != 0 && countC != 0 && countD != 0 {
+				i = size - 1
+			}
 		}
 		if ss[i] == "b" {
 			countB = i + 1
+			if countA != 0 && countC != 0 && countD != 0 {
+				i = size - 1
+			}
 		}
 		if ss[i] == "c" {
 			countC = i + 1
+			if countA != 0 && countB != 0 && countD != 0 {
+				i = size - 1
+			}
 		}
 		if ss[i] == "d" {
 			countD = i + 1
+			if countA != 0 && countB != 0 && countC != 0 {
+				i = size - 1
+			}
 		}
+
 	}
 	fmt.Println(countA)
 	fmt.Println(countB)
